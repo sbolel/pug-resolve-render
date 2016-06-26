@@ -1,6 +1,6 @@
 {
   "name": "@rw/pug-resolve-render",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Pug template resolver and renderer for expressjs apps",
   "main": "index.js",
   "repository": {
@@ -23,5 +23,8 @@
     "jade"
   ],
   "author": "Sinan Bolel <sinanbolel@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "pug": "^2.0.0-beta3"
+  }
 }
