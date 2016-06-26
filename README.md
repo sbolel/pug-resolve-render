@@ -1,0 +1,2 @@
+# pug-resolve-render
+

@@ -1,0 +1,27 @@
+{
+  "name": "@rw/pug-resolve-render",
+  "version": "0.0.1",
+  "description": "Pug template resolver and renderer for expressjs apps",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sbolel/pug-resolve-render.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "~6.2.2",
+    "npm": "~3.10.3"
+  },
+  "keywords": [
+    "express",
+    "pug",
+    "template",
+    "render",
+    "resolve",
+    "jade"
+  ],
+  "author": "Sinan Bolel <sinanbolel@gmail.com>",
+  "license": "MIT"
+}
