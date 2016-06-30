@@ -4,16 +4,15 @@ const path = require('path')
 const pug = require('pug')
 const Resolver = require('./resolver')
 
-function Renderer(path) {
-  this.path = path
-  this.absolutePath = path.join(process.cwd(), path)
-  const self = this;
+function Renderer (templatePath) {
+  const self = this
+  this.path = path.join(process.cwd(), templatePath)
   const render = (locals) => new Promise((resolve, reject) => {
     const resolvePug = new Resolver(self.path)
     resolvePug().then(() => {
       try {
         const jadeLocals = Object.assign({}, locals)
-        const pageFn = pug.compileFile(`${path.join(viewPath, template)}.pug`)
+        const pageFn = pug.compileFile(`${path.join(self.absolutePath)}.pug`)
         pug.render(pageFn(jadeLocals), jadeLocals, (err, html) => {
           if (err) reject(err)
           else resolvePug(html)
@@ -23,7 +22,7 @@ function Renderer(path) {
       }
     }).catch((err) => reject(err))
   })
-  render.__proto__ = this.__proto__
+  render.prototype = this.prototype
   return render
 }
 

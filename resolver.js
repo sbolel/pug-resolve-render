@@ -2,7 +2,7 @@
 
 const fs = require('fs')
 
-function Resolver(path) {
+function Resolver (path) {
   this.path = path
   const self = this
   const resolvePug = () =>
@@ -15,8 +15,7 @@ function Resolver(path) {
         }
       })
     })
-
-  resolvePug.__proto__ = this.__proto__
+  resolvePug.prototype = this.prototype
   return resolvePug
 }
 
